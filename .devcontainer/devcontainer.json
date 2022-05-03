@@ -1,0 +1,16 @@
+{
+  "name": "vue-test",
+  "workspaceFolder": "/workspace",
+  "image": "node:17",
+  "runArgs": ["-it"],
+  "extensions": [
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "esbenp.prettier-vscode",
+    "octref.vetur"
+  ],
+  "mounts": [
+    "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind,consistency=cached",
+    "source=try-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=try-build,target=${containerWorkspaceFolder}/build,type=volume"
+  ]
+}
